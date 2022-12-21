@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ClickContext } from "../context/ClickContext";
 
 function MinusButton() {
-  return (
-    <div>
+    // 7. Abonneren op de context die je wilt gebruiken
+    const { minusOneFunction } =useContext(ClickContext)
 
-    </div>
+  return (
+    <button type="button" onClick={ minusOneFunction }>
+      -
+    </button>
   );
 }
 

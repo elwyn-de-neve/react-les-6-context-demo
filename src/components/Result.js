@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ClickContext } from "../context/ClickContext";
 
 function Result() {
-  return (
-    <div>
+    // 7. Abonneren op de context die je wilt gebruiken
+    const { clicks } = useContext( ClickContext )
 
-    </div>
-  );
+    return (
+        <h2>Het resultaat is: { clicks }</h2>
+    );
 }
 
 export default Result;
